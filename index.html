@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Praduman Dwivedi — Computer Science (AI/ML) student, Java developer, DSA enthusiast, and Aspiring Java Developer.">
+
+    <meta name="theme-color" content="#0b0b12">
+
+    <title>Praduman Dwivedi | Java Developer & AI/ML Enthusiast</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--
+        Configure EmailJS in script.js after creating your EmailJS account.
+        Never publish private service credentials or secret keys.
+    -->
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Particle Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Decorations -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">Praduman<span>.</span></div>
+
+            <div class="cmd-palette">
+                <span>Search command...</span>
+                <kbd>Ctrl K</kbd>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Command Palette Modal -->
+    <div id="cmdOverlay" class="cmd-overlay">
+
+        <div class="cmd-modal" id="cmdModal">
+
+            <div class="cmd-search-wrap">
+                <span class="cmd-search-icon">⌘</span>
+
+                <input type="text"
+                    id="cmdInput"
+                    class="cmd-input"
+                    placeholder="Type a command or search..."
+                    autocomplete="off"
+                    spellcheck="false">
+
+                <kbd class="cmd-esc-hint">ESC</kbd>
+            </div>
+
+            <div class="cmd-results" id="cmdResults"></div>
+
+            <div class="cmd-footer">
+                <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+                <span><kbd>↵</kbd> open</span>
+                <span><kbd>ESC</kbd> close</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="status-badge fade-up" style="--delay: 0.05s">
+                <span class="status-dot"></span>
+                Computer Science Student · AI/ML Enthusiast
+            </div>
+
+            <h2 class="fade-up" style="--delay: 0.1s">
+                👋🏻 Hey, I'm PRADUMAN,
+            </h2>
+
+            <h1 class="fade-up" style="--delay: 0.2s">
+                An Aspiring
+                <span class="gradient-text type-effect">Software Engineer</span>.
+            </h1>
+
+            <p class="fade-up" style="--delay: 0.3s">
+                B.Tech Computer Science student specializing in AI & Machine Learning.
+                I build applications using Java, Spring Boot, MySQL, and modern web
+                technologies while strengthening my problem-solving skills through DSA.
+            </p>
+
+            <div class="action-btns fade-up" style="--delay: 0.4s">
+
+                <a href="#projects" class="btn primary">
+                    Explore My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Get In Touch
+                </a>
+
+                <a href="resume.pdf"
+                    download="Praduman_Dwivedi_Resume.pdf"
+                    class="btn resume-btn">
+                    ⬇ Résumé
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+
+        <div class="section-heading reveal">
+
+            <h2>My <span>Education</span></h2>
+
+            <p>
+                Building a strong foundation in computer science,
+                software development, and artificial intelligence.
+            </p>
+
+        </div>
+
+        <div class="bento-grid reveal">
+
+            <div class="skill-card tilt-card edu-main">
+
+                <div class="icon">🎓</div>
+
+                <p class="date">2024 - 2028</p>
+
+                <h3>Bachelor of Technology</h3>
+
+                <p>
+                    <strong>
+                        Computer Science Engineering
+                        (AI & Machine Learning)
+                    </strong>
+                </p>
+
+                <p class="highlight-text">
+                    Focus: <strong>Software Development & AI/ML</strong>
+                </p>
+
+                <p>
+                    Studying core computer science concepts while developing
+                    practical skills in programming, algorithms, databases,
+                    and intelligent systems.
+                </p>
+
+            </div>
+
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">💻</div>
+
+                <p class="date">Problem Solving</p>
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p>
+                    Practicing coding problems using Java, focusing on
+                    problem-solving, algorithmic thinking, and optimization.
+                </p>
+
+            </div>
+
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">🚀</div>
+
+                <p class="date">Continuous Learning</p>
+
+                <h3>Developer Journey</h3>
+
+                <p>
+                    Learning backend development, databases, full-stack
+                    technologies, and AI/ML through hands-on projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+
+        <div class="section-heading reveal">
+
+            <h2>My <span>Tech Stack</span></h2>
+
+            <p>
+                Technologies I'm learning and using to build practical software.
+            </p>
+
+        </div>
+
+        <div class="bento-grid reveal">
+
+            <!-- Programming and DSA -->
+            <div class="skill-card tilt-card edu-main">
+
+                <div class="icon">☕</div>
+
+                <h3>Java & DSA</h3>
+
+                <p>
+                    Developing problem-solving skills with Java and studying
+                    data structures, algorithms, recursion, backtracking,
+                    dynamic programming, hashing, and other core concepts.
+                </p>
+
+                <p class="sub-skills">
+                    Java · OOP · Arrays · Strings · HashMap · Recursion ·
+                    Backtracking · Dynamic Programming
+                </p>
+
+                <div class="progress-bar">
+                    <div class="fill" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+            <!-- Backend Development -->
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">⚡</div>
+
+                <h3>Backend Development</h3>
+
+                <p>
+                    Learning to develop REST APIs and backend applications
+                    using Java, Spring Boot, and MySQL.
+                </p>
+
+                <p class="sub-skills">
+                    Java · Spring Boot · REST APIs · JDBC · MySQL · Maven
+                </p>
+
+                <div class="progress-bar">
+                    <div class="fill" style="width: 65%;"></div>
+                </div>
+
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">🎨</div>
+
+                <h3>Frontend Development</h3>
+
+                <p>
+                    Building responsive interfaces and learning to connect
+                    frontend applications with backend services.
+                </p>
+
+                <p class="sub-skills">
+                    HTML5 · CSS3 · JavaScript · React
+                </p>
+
+                <div class="progress-bar">
+                    <div class="fill" style="width: 55%;"></div>
+                </div>
+
+            </div>
+
+            <!-- AI/ML -->
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">🤖</div>
+
+                <h3>AI & Machine Learning</h3>
+
+                <p>
+                    Exploring Python, machine learning fundamentals,
+                    intelligent applications, and AI-powered solutions.
+                </p>
+
+                <p class="sub-skills">
+                    Python · Machine Learning · Data Analysis · AI Concepts
+                </p>
+
+                <div class="progress-bar">
+                    <div class="fill" style="width: 45%;"></div>
+                </div>
+
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-card tilt-card edu-side">
+
+                <div class="icon">🛠️</div>
+
+                <h3>Developer Tools</h3>
+
+                <p>
+                    Working with development environments, version control,
+                    build tools, and containerization.
+                </p>
+
+                <p class="sub-skills">
+                    Git · GitHub · IntelliJ IDEA · VS Code · Maven · Docker
+                </p>
+
+                <div class="progress-bar">
+                    <div class="fill" style="width: 60%;"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+
+        <div class="section-heading reveal">
+
+            <h2>Things I've <span>Built</span></h2>
+
+            <p>
+                Practical projects combining software engineering,
+                backend development, and intelligent systems.
+            </p>
+
+        </div>
+
+        <div class="projects-container">
+
+            <!-- JOBS 24 -->
+            <div class="project-card glass reveal tilt-card">
+
+                <div class="project-img">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Job tracking application displayed on a computer">
+
+                    <div class="project-tag">
+                        Full Stack · Spring Boot · MySQL
+                    </div>
+
+                </div>
+
+                <div class="project-info">
+
+                    <h3>JOBS 24 — Job Tracking Application</h3>
+
+                    <p>
+                        A full-stack job application tracker designed to
+                        organize job applications in one place. Features
+                        include CRUD operations, job status tracking,
+                        search and filtering, and a responsive interface.
+                        Built with React, Spring Boot, and MySQL,
+                        with Docker support for local development.
+                    </p>
+
+                    <div class="tech-pills">
+                        <span>React</span>
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>MySQL</span>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/Prad1208"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="code-link">
+                            [GitHub]
+                        </a>
+
+                        <!-- Add your JOBS 24 repository URL when confirmed -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI METRO PROJECT -->
+            <div class="project-card glass reveal tilt-card"
+                style="transition-delay: 0.2s">
+
+                <div class="project-img">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1000"
+                        alt="Urban public transportation">
+
+                    <div class="project-tag">
+                        AI/ML · Smart Transportation
+                    </div>
+
+                </div>
+
+                <div class="project-info">
+
+                    <h3>AI Metro — Smart Metro Intelligence</h3>
+
+                    <p>
+                        An AI-focused metro project concept aimed at exploring
+                        smarter urban transportation. Potential features include
+                        passenger demand prediction, crowd-level forecasting,
+                        and data-driven travel insights.
+                    </p>
+
+                    <div class="tech-pills">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Data Analysis</span>
+                        <span>AI/ML</span>
+                    </div>
+
+                    <div class="project-links">
+
+                        <span class="code-link">
+                            [Planned Project]
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PERSONAL PORTFOLIO -->
+            <div class="project-card glass reveal tilt-card"
+                style="transition-delay: 0.4s">
+
+                <div class="project-img">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Modern web development workspace">
+
+                    <div class="project-tag">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Personal Developer Portfolio</h3>
+
+                    <p>
+                        A personal portfolio showcasing my technical skills,
+                        education, software projects, and development journey.
+                        Designed to provide a single place to explore my work
+                        and connect with me.
+                    </p>
+
+                    <div class="tech-pills">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/Prad1208"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="code-link">
+                            [GitHub Profile]
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section reveal">
+
+        <div class="contact-box glass reveal">
+
+            <h2>Let's <span>Connect</span></h2>
+
+            <p class="contact-info">
+                Have an interesting project, internship opportunity,
+                or idea related to software development and AI?
+                I'd love to connect.
+            </p>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="YOUR NAME">
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="YOUR EMAIL ADDRESS">
+
+                </div>
+
+                <div class="input-group full">
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        placeholder="WRITE YOUR MESSAGE"></textarea>
+
+                </div>
+
+                <div class="input-group full">
+
+                    <button
+                        type="submit"
+                        class="btn primary w-full"
+                        id="submitBtn">
+                        SEND MESSAGE
+                    </button>
+
+                    <div
+                        id="formStatus"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+                </div>
+
+            </form>
+
+            <div class="contact-socials">
+
+                <a
+                    href="https://github.com/Prad1208"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <span> · </span>
+
+                <a
+                    href="https://leetcode.com/u/PradumanDwivedi/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LeetCode
+                </a>
+
+                <span> · </span>
+
+                <!-- Add your LinkedIn profile URL here -->
+
+                <a href="#home">
+                    Back to Top ↑
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 PRADUMAN DWIVEDI.
+            BUILT WITH CURIOSITY, CODE, AND CONSISTENCY.
+        </p>
+
+    </footer>
+
+    <!-- Chat Assistant Widget -->
+    <div
+        id="chatToggle"
+        class="chat-toggle"
+        title="Ask Praduman">
+
+        <span class="chat-toggle-icon">💬</span>
+
+        <span class="chat-toggle-label">Ask me</span>
+
+    </div>
+
+    <div id="chatWindow" class="chat-window">
+
+        <div class="chat-header">
+
+            <div class="chat-header-info">
+
+                <div class="chat-avatar">P</div>
+
+                <div>
+
+                    <div class="chat-name">
+                        Praduman's Assistant
+                    </div>
+
+                    <div class="chat-status">
+                        <span class="status-dot-sm"></span>
+                        Portfolio Assistant
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button
+                id="chatClose"
+                class="chat-close"
+                aria-label="Close chat">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="chat-body" id="chatBody"></div>
+
+        <div class="chat-input-area">
+
+            <input
+                type="text"
+                id="chatInput"
+                class="chat-input"
+                placeholder="Ask about my skills or projects..."
+                autocomplete="off">
+
+            <button
+                id="chatSend"
+                class="chat-send"
+                aria-label="Send message">
+                ↗
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
